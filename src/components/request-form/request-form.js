@@ -15,6 +15,8 @@ const RequestForm = () => {
         personalId: "",
         nationality: "",
         sex: "",
+        reason: "",
+        differentReason: ""
 
 
     });
@@ -142,12 +144,12 @@ const RequestForm = () => {
 
                 <p>Podaj swoją płeć</p>
 
-            <div className="form-check">
+            <div className="form-check" onClick={handleChange}>
                 <input className="form-check-input"
                        type="radio"
                        name="sex"
                        id="flexRadioDefault1"
-                       value={personInfo.sex}
+                       value="female"
                        onChange={handleChange}
 
                 />
@@ -155,12 +157,12 @@ const RequestForm = () => {
                         Kobieta
                     </label>
             </div>
-            <div className="form-check">
+            <div className="form-check" onClick={handleChange}>
                 <input className="form-check-input"
                        type="radio"
                        name="sex"
                        id="flexRadioDefault2"
-                       value={personInfo.sex}
+                       value="male"
                        onChange={handleChange}
                 />
                     <label className="form-check-label" htmlFor="flexRadioDefault2">
@@ -171,13 +173,18 @@ const RequestForm = () => {
 <div>
 
     <p>Podaj pztyczynę wyrobienia paszportu</p>
-            <select id="list" onChange="getSelectedValue();">
-                <option value="wybierz">Wybierz</option>
-                <option value="Ptzyczyna2">paszport poprostu zgubilem</option>
-                <option value="Przyczyna3">paszport skonczył date ważności</option>
+            <select name="reason" onChange={handleChange} placeholder='wybierz'>
+                <option value="paszport poprostu zgubilem">paszport poprostu zgubilem</option>
+                <option value="paszport skonczył date ważności">paszport skonczył date ważności</option>
                 <option value="Przyczyna3">inna</option>
             </select>
-    <input type="text" className="form-control" name='name' placeholder="Podaj inną przyczyne wyrobienia paszportu"/>
+    <input type="text"
+           className="form-control"
+           name='differentReason'
+           placeholder="Podaj inną przyczyne wyrobienia paszportu"
+           onChange={handleChange}
+           style={personInfo.reason !== 'Przyczyna3' ? {display: "none"} : {display: "block"}}
+    />
 </div>
 <div>
 
