@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./style.css";
+import Regulamin from "../regulamin/regulamin";
 
 
 
@@ -13,6 +14,7 @@ const RequestForm = () => {
         placeOfBirth: "",
         personalId: "",
         nationality: "",
+        sex: "",
 
 
     });
@@ -141,13 +143,26 @@ const RequestForm = () => {
                 <p>Podaj swoją płeć</p>
 
             <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <input className="form-check-input"
+                       type="radio"
+                       name="sex"
+                       id="flexRadioDefault1"
+                       value={personInfo.sex}
+                       onChange={handleChange}
+
+                />
                     <label className="form-check-label" htmlFor="flexRadioDefault1">
                         Kobieta
                     </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                <input className="form-check-input"
+                       type="radio"
+                       name="sex"
+                       id="flexRadioDefault2"
+                       value={personInfo.sex}
+                       onChange={handleChange}
+                />
                     <label className="form-check-label" htmlFor="flexRadioDefault2">
                         Mężczyzna
                     </label>
@@ -167,6 +182,7 @@ const RequestForm = () => {
 <div>
 
     <p>Zapoznałęm się z regulaminem</p>
+    <Regulamin></Regulamin>
             <label>
                 <input type="checkbox"/>
             </label>
@@ -175,6 +191,7 @@ const RequestForm = () => {
 
             <button type="submit">Wyślij formularz
             </button>
+
         </form>
 
 </div>
