@@ -6,6 +6,10 @@ import Regulamin from "../regulamin/regulamin";
 
 const RequestForm = () => {
 
+    const check = (checked) => {
+       return  checked !== "" ? {display: "none"} : {display: "block"}
+    }
+
     const [personInfo, setPersonInfo] = useState({
         name: "",
         secondName: "",
@@ -30,10 +34,14 @@ const RequestForm = () => {
         event.preventDefault();
         console.log(personInfo);
     };
-
+    // const checkNumber = (hasError) => {
+    //     if (hasError) {
+    //         personInfo.personalId !== '' && personInfo.personalId.length !== '11' ? {display: "none"} : {display: "block"}
+    //     }
+    // }
     return(
 
-<div>
+<div className="container">
 
     <p className= "wypij"> W celu złożenia wniosku o paszport proszę wypełnić wszystkie pola </p>
 
@@ -62,6 +70,7 @@ const RequestForm = () => {
                            value={personInfo.name}
                            onChange={handleChange}
                     />
+                    <p style={check(personInfo.name)}>pole jest wymagane</p>
                 </div>
             </div>
 
@@ -88,6 +97,7 @@ const RequestForm = () => {
                            value={personInfo.surname}
                            onChange={handleChange}
                     />
+                    <p style={check(personInfo.surname)}>pole jest wymagane</p>
                 </div>
             </div>
             <div className="form-group row">
@@ -123,8 +133,17 @@ const RequestForm = () => {
                            placeholder="Wpisz swój numer pesel"
                            value={personInfo.personalId}
                            onChange={handleChange}
+                           // onBlur={checkNumber(true)}
+
                     />
+
+                    <p style={personInfo.personalId.length === 11 ? {display: "none"} : {display: "block"}}>Pesel powinien zawierać 11 cyfr</p>
                 </div>
+
+                {/*<p  style={}>Numer pelel powinien zawierać 11 cyfr*/}
+
+                {/*</p>*/}
+
             </div>
 
             <div className="form-group row">

@@ -12,8 +12,7 @@ import Regulamin from "./components/regulamin/regulamin";
 function App() {
   return (
       <>
-          <Menu>
-          </Menu>
+          <Menu/>
           <Router>
               <Routes>
                   <Route path='/' element={<Main />} />
