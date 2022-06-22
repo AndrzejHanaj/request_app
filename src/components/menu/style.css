@@ -1,18 +1,51 @@
+div.divmenu{
+    background-color: currentColor;
+}
+
+.logo{
+    color: white ;
+    font-size: 30px;
+    margin-left: 60px;
+}
+
+
 li{
     list-style: none;
-    margin: 0 40px 0 0;
+    margin: 0 50px 0 0;
+}
+
+li{
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 ul {
     display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 60px;
 }
 a {
     text-decoration: none;
-    color: black;
+    color: white;
+
 }
 li:hover {
     transform: scale(1.5);
+    color: currentColor;
 }
+a:hover{
+    color: currentcolor;
+}
+
 nav{
     height: 10vh;
+    display: flex;
+    border-radius: 60px 0 0 60px;
+}
+
+.bg-light{
+    background-color: #0099FF !important;
 }

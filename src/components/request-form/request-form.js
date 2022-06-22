@@ -1,7 +1,7 @@
-import React, {useState} from "react";
 import "./style.css";
 import Regulamin from "../regulamin/regulamin";
-
+import React, { useEffect, useRef, useState } from 'react';
+import ReactDOM from 'react-dom';
 
 
 const RequestForm = () => {
@@ -39,7 +39,17 @@ const RequestForm = () => {
     //         personInfo.personalId !== '' && personInfo.personalId.length !== '11' ? {display: "none"} : {display: "block"}
     //     }
     // }
-    return(
+
+
+    function validation(name){
+        if (name !== ""){
+            return ''
+        }
+        else console.log("źle");
+
+    }
+
+        return(
 
 <div className="container">
 
@@ -69,8 +79,12 @@ const RequestForm = () => {
                            placeholder="Wpisz imię"
                            value={personInfo.name}
                            onChange={handleChange}
+                           // onBlur={validation(personInfo.name)}
                     />
-                    <p style={check(personInfo.name)}>pole jest wymagane</p>
+                    <p style={check(personInfo.name)}>pole jest wymagane
+                        {personInfo.name === ''?  <p>jest zle</p>:''}
+                    </p>
+                    {validation(personInfo.name)}
                 </div>
             </div>
 
