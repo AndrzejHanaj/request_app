@@ -221,6 +221,66 @@ const RequestForm = () => {
 </div>
 <div>
 
+
+
+
+    <p className="dane">Dane Kontaktowe</p>
+
+
+    <div className="form-group row">
+        <label className="col-sm-2 col-form-label">Adres e-mail</label>
+        <div className="col-sm-10">
+            <input type="@"
+                   className="form-control"
+                   name='placeOfBirth'
+                   placeholder="Adres e-mail"
+            />
+        </div>
+    </div>
+
+    <div className="form-group row">
+        <label className="col-sm-2 col-form-label">Numer telefonu</label>
+        <div className="col-sm-10">
+            <input type="number"
+                   className="form-control"
+                   name='placeOfBirth'
+                   placeholder="Telefon"
+            />
+        </div>
+    </div>
+
+
+    <div className="form-group row">
+        <label className="col-sm-2 col-form-label">Adres zamieszkania</label>
+        <div className="col-sm-10">
+            <input type="text"
+                   className="form-control"
+                   name='placeOfBirth'
+                   placeholder="Miasto"
+
+            />
+            <input type="text"
+                   className="form-control"
+                   name='placeOfBirth'
+                   placeholder="ulica"
+
+            />
+            <input type="text"
+                   className="form-control"
+                   name='placeOfBirth'
+                   placeholder="Numer lokalu"
+
+            />
+            <input type="text"
+                   className="form-control"
+                   name='placeOfBirth'
+                   placeholder="Kod pocztowy"
+
+            />
+        </div>
+    </div>
+
+
     <p>Zapoznałęm się z regulaminem</p>
     <Regulamin></Regulamin>
             <label>

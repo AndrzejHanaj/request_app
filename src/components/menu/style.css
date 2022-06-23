@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300&display=swap');
+
 div.divmenu{
     background-color: #05203B;
 }
 
 .logo{
+    font-weight: bold;
+    font-family: 'Stoke', serif;
     color: white ;
     font-size: 30px;
     margin-left: 60px;
@@ -28,6 +32,7 @@ ul {
     margin-right: 60px;
 }
 a {
+
     text-decoration: none;
     color: white;
 
