@@ -20,7 +20,14 @@ const RequestForm = () => {
         nationality: "",
         sex: "",
         reason: "",
-        differentReason: ""
+        differentReason: "",
+        mail: "",
+        number: "",
+        city: "",
+        street: "",
+        homeNumber: "",
+        zipCode: "",
+
 
 
     });
@@ -51,7 +58,7 @@ const RequestForm = () => {
 
         return(
 
-<div className="containers">
+<div className="container">
 
     <p className= "wypij"> W celu złożenia wniosku o paszport proszę wypełnić wszystkie pola </p>
 
@@ -222,6 +229,16 @@ const RequestForm = () => {
 <div>
 
 
+{/*    <input type="text"*/}
+{/*           className="form-control"*/}
+{/*           name='nationality'*/}
+{/*           placeholder="Podaj swoją narodowość"*/}
+{/*           value={personInfo.nationality}*/}
+{/*           onChange={handleChange}*/}
+{/*    />*/}
+{/*</div>*/}
+{/*</div>*/}
+{/*    */}
 
 
     <p className="dane">Dane Kontaktowe</p>
@@ -230,10 +247,12 @@ const RequestForm = () => {
     <div className="form-group row">
         <label className="col-sm-2 col-form-label">Adres e-mail</label>
         <div className="col-sm-10">
-            <input type="@"
+            <input type=""
                    className="form-control"
-                   name='placeOfBirth'
+                   name='mail'
                    placeholder="Adres e-mail"
+                   value={personInfo.mail}
+                   onChange={handleChange}
             />
         </div>
     </div>
@@ -243,8 +262,10 @@ const RequestForm = () => {
         <div className="col-sm-10">
             <input type="number"
                    className="form-control"
-                   name='placeOfBirth'
+                   name='number'
                    placeholder="Telefon"
+                   value={personInfo.number}
+                   onChange={handleChange}
             />
         </div>
     </div>
@@ -255,26 +276,34 @@ const RequestForm = () => {
         <div className="col-sm-10">
             <input type="text"
                    className="form-control"
-                   name='placeOfBirth'
+                   name='city'
                    placeholder="Miasto"
+                   value={personInfo.city}
+                   onChange={handleChange}
 
             />
             <input type="text"
                    className="form-control"
-                   name='placeOfBirth'
+                   name='street'
                    placeholder="ulica"
+                   value={personInfo.street}
+                   onChange={handleChange}
 
             />
             <input type="text"
                    className="form-control"
-                   name='placeOfBirth'
+                   name='homeNumber'
                    placeholder="Numer lokalu"
+                   value={personInfo.homeNumber}
+                   onChange={handleChange}
 
             />
             <input type="text"
                    className="form-control"
-                   name='placeOfBirth'
+                   name='zipCode'
                    placeholder="Kod pocztowy"
+                   value={personInfo.zipCode}
+                   onChange={handleChange}
 
             />
         </div>
