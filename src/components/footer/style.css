@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&family=Roboto+Condensed&display=swap');
+
+
+
+.foba{
+    background: #1e3f58;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    background-color: #0099FF;
+    height: 10vh ;
+    border-radius: 60px 0 0 60px;
+}
+
+.klasa{
+    background-image: url("atom (1).jpg");
+    height: 64px;
+    width: 64px;
+}
+.klasa1{
+    background-image: url("html-5 (1).jpg");
+    width: 64px;
+    height: 64px;
+}
+.klasa2{
+    background-image: url("css-3.jpg");
+    height: 64px;
+    width: 64px;
+}
+.klasa3{
+    background-image: url("js (1).jpg");
+    width: 64px;
+    height: 64px;
+}

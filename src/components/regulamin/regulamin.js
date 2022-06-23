@@ -21,7 +21,7 @@ const Regulamin = () => {
                 <Modal.Header closeButton>
                     <Modal.Title>Regulamin wniosku</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet assumenda at beatae, deserunt dolorem eius iusto minus necessitatibus odit, officiis quasi repellat temporibus, veritatis voluptate! Culpa deserunt dolor laudantium.</Modal.Body>
+                <Modal.Body> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet assumenda at beatae, deserunt dolorem eius iusto minus necessitatibus odit, officiis quasi repellat temporibus, veritatis voluptate! Culpa deserunt dolor laudantium.</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Zamknij

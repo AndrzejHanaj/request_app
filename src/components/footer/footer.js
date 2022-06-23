@@ -1,17 +1,20 @@
-
 import  React from 'react';
+import "./style.css"
 
 
 const footer = () => {
 
-    return (
+    return(
+        <div className="foba">
+    <div className="footer">
 
-    <footer className= "">
+        <div className="klasa"></div>
+        <div className="klasa1"></div>
+        <div className="klasa2"></div>
+        <div className="klasa3"></div>
 
-
-
-    </footer>
-
+</div>
+        </div>
     )
 }
 

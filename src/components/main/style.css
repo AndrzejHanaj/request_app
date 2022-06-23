@@ -1,25 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300&display=swap');
+
 div.container{
-    margin: auto;
-    height: 100%;
+    /*background: url("app_background3.jpg") no-repeat center center fixed;*/
+    /*background-size: cover;*/
+    /*margin: auto;*/
+    /*height: 100%;*/
+}
+.background{
+    opacity: 0.20;
 }
 
 nav{
-    background-color: #3399FF
+    background-color: #3399FF;
 
 }
 
 div.footer{
-    background-color: currentColor;
+    background-color: #3399FF;
 }
 
 div.main{
     height: 80vh;
-    background-color: currentColor;
+    background-color: #00010c;
+    background: url("app_background2.jpg") no-repeat center center fixed;
 }
 h1{
+    font-family: 'Stoke', serif;
+    font-weight: bolder;
+    padding-top: 92px;
     color: white;
     text-align: center;
-    margin: 0px 30px 30px 30px;
+    margin: 0 30px 30px 30px;
 ;
 }
 
@@ -27,20 +39,29 @@ h1{
 .button{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 169px;
 }
-div>button{
-    height: 100px;
 
-
+.button1>a{
+    color: white;
+    font-size: 18px;
+}
+.button1{
+    background: #1E88E5;
+    border: none;
+    border-radius: 50px;
+    width: 250px;
+    height: 60px;
 
 }
 
 .button1:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 50px 0 #FFD54F, 0 17px 50px 0 black;
 }
 
 footer{
     background-color: #0099FF;
     height: 10vh ;
-    border-radius: 0 60px 60px 0;
+    border-radius: 60px 0 0 60px;
+
 }

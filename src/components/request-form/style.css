@@ -1,3 +1,13 @@
+.containers{
+  background-color: blue;
+}
+p{
+  color: white;
+}
+.col-sm-2{
+  color: white;
+}
+
 div.form-group {
   margin-top: 10px;
   margin-bottom: 10px
@@ -8,3 +18,4 @@ div.form-group {
   margin-bottom: 20px;
   text-align: center;
 }
+

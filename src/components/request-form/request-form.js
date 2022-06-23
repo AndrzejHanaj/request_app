@@ -51,7 +51,7 @@ const RequestForm = () => {
 
         return(
 
-<div className="container">
+<div className="containers">
 
     <p className= "wypij"> W celu złożenia wniosku o paszport proszę wypełnić wszystkie pola </p>
 
@@ -82,7 +82,7 @@ const RequestForm = () => {
                            // onBlur={validation(personInfo.name)}
                     />
                     <p style={check(personInfo.name)}>pole jest wymagane
-                        {personInfo.name === ''?  <p>jest zle</p>:''}
+                        {/*{personInfo.name === ''?  <p>jest zle</p>:''}*/}
                     </p>
                     {validation(personInfo.name)}
                 </div>
