@@ -318,8 +318,7 @@ const RequestForm = () => {
 
 </div>
 
-            <button type="submit">Wyślij formularz
-            </button>
+            <button className="button1"><a href='/request-list'>Lista Wniosków</a></button>
 
         </form>
 

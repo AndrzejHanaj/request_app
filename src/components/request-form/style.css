@@ -1,5 +1,6 @@
 .container{
-  background-color: #282c34;
+
+
 }
 p{
   color: white;
@@ -25,3 +26,22 @@ div.form-group {
   margin-bottom: 20px;
   text-align: center;
  }
+
+#andrzej{
+  background-image: url("app_background.jpg") ;
+}
+
+.form-check-label{
+  color: white;
+}
+
+button{
+  background: #1E88E5;
+  border: none;
+  border-radius: 50px;
+  width: 250px;
+  height: 60px;
+  margin: 30px;
+}
+
+button:hover{box-shadow: 0 30px 50px 0 #FFD54F}
