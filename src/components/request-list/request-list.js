@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-const RequestList = () => {
+const RequestList = (props) => {
 
     return(
 
@@ -23,24 +23,28 @@ const RequestList = () => {
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Andrzej</td>
-                    <td>Hanaj</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jola</td>
-                    <td>Recka</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+
+
+                {props.people.map((person, i) => {
+                    return(
+                        <tr key={i}>
+                            <td>
+                                {person.name}
+                            </td>
+                            <td>
+                                {person.secondName}
+                            </td>
+                            <td>
+                                {person.surname}
+                            </td>
+                            <td>
+                                {person.mail}
+                            </td>
+                        </tr>
+                    )
+                })}
+
+
                 </tbody>
             </table>
 </div>

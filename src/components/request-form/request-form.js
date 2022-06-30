@@ -2,9 +2,17 @@ import "./style.css";
 import Regulamin from "../regulamin/regulamin";
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
-
+import {db} from "../../firebase/firebase";
+import {collection, doc, getDocs, addDoc} from "firebase/firestore";
 
 const RequestForm = () => {
+
+
+    const peopleColectionRef = collection(db, "people")
+    const createPerson = async () => {
+        await addDoc (peopleColectionRef, personInfo)
+
+    }
 
     const check = (checked) => {
        return  checked !== "" ? {display: "none"} : {display: "block"}
@@ -30,8 +38,18 @@ const RequestForm = () => {
 
 
 
-    });
 
+    });
+    const [regulamin, setRegulamin] = useState({regulamin: false});
+    const acceptRegulamin = () => {
+        setRegulamin({
+            regulamin: !regulamin.regulamin
+        });
+
+
+        console.log(regulamin);
+        console.log(regulamin.regulamin);
+    }
     const handleChange = (event) => {
         setPersonInfo({ ...personInfo, [event.target.name]: event.target.value });
     };
@@ -39,7 +57,7 @@ const RequestForm = () => {
     const handleSubmit = (event) => {
         // prevents the submit button from refreshing the page
         event.preventDefault();
-        console.log(personInfo);
+createPerson();
     };
     // const checkNumber = (hasError) => {
     //     if (hasError) {
@@ -313,12 +331,17 @@ const RequestForm = () => {
     <p>Zapoznałęm się z regulaminem</p>
     <Regulamin></Regulamin>
             <label>
-                <input type="checkbox"/>
+                <input name= "regulamin" type="checkbox"
+                       value={personInfo.regulamin}
+                       onClick={acceptRegulamin}
+
+                />
             </label>
 
 </div>
 
-            <button className="button1"><a href='/request-list'>Lista Wniosków</a></button>
+            <button className="button1" type="submit" disabled={!regulamin.regulamin} >Wyślij wniosek</button>
+
 
         </form>
 
