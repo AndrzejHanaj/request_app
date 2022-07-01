@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300&display=swap');
 
 div.divmenu{
-    background-color: #05203B;
+    background-color: #FFD54F;
+    border-bottom: 3px solid #FFD54F;
 }
 
 .logo{

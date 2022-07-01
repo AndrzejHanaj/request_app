@@ -78,9 +78,9 @@ createPerson();
 
 <div className="container">
 
-    <p className= "wypij"> W celu złożenia wniosku o paszport proszę wypełnić wszystkie pola </p>
+    <p className= "opis"> - DANE OSOBOWE - </p>
 
-        <form onSubmit={handleSubmit}>
+        <form className="container" onSubmit={handleSubmit}>
 
             {/*<div className="form-check">*/}
             {/*    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>*/}
@@ -96,8 +96,10 @@ createPerson();
             {/*</div>*/}
 
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Imię</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Imię :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="text"
                            className="form-control"
                            name='name'
@@ -106,16 +108,18 @@ createPerson();
                            onChange={handleChange}
                            // onBlur={validation(personInfo.name)}
                     />
-                    <p style={check(personInfo.name)}>pole jest wymagane
+                    <p className="pole" style={check(personInfo.name)}>pole jest wymagane
                         {/*{personInfo.name === ''?  <p>jest zle</p>:''}*/}
                     </p>
-                    {validation(personInfo.name)}
+                    {/*{validation(personInfo.name)}*/}
                 </div>
             </div>
 
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Drugie Imię</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Drugie Imię :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="text"
                            className="form-control"
                            name='secondName'
@@ -123,12 +127,16 @@ createPerson();
                            value={personInfo.secondName}
                            onChange={handleChange}
                     />
+                    <p className="pole"> </p>
+
                 </div>
             </div>
 
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Nazwisko</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Nazwisko :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="text"
                            className="form-control"
                            name='surname'
@@ -136,12 +144,14 @@ createPerson();
                            value={personInfo.surname}
                            onChange={handleChange}
                     />
-                    <p style={check(personInfo.surname)}>pole jest wymagane</p>
+                    <p className="pole" style={check(personInfo.surname)}>pole jest wymagane</p>
                 </div>
             </div>
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Data urodzenia</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Data urodzenia :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="date"
                            className="form-control"
                            name='dateOfBirth'
@@ -149,11 +159,15 @@ createPerson();
                            value={personInfo.dateOfBirth}
                            onChange={handleChange}
                     />
+                    <p className="pole" style={check(personInfo.dateOfBirth)}>pole jest wymagane</p>
+                    {validation(personInfo.name)}
                 </div>
             </div>
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Miejsce urodzenia</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Miejsce urodzenia :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="text"
                            className="form-control"
                            name='placeOfBirth'
@@ -161,46 +175,57 @@ createPerson();
                            value={personInfo.placeOfBirth}
                            onChange={handleChange}
                     />
+                    <p className="pole" style={check(personInfo.placeOfBirth)}>pole jest wymagane</p>
                 </div>
                 </div>
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Pesel</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Pesel :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="number"
                            className="form-control"
                            name='personalId'
                            placeholder="Wpisz swój numer pesel"
                            value={personInfo.personalId}
                            onChange={handleChange}
-                           // onBlur={checkNumber(true)}
+
 
                     />
 
+
+
                     <p style={personInfo.personalId.length === 11 ? {display: "none"} : {display: "block"}}>Pesel powinien zawierać 11 cyfr</p>
+                    <p className="pole" style={check(personInfo.personalId)}>pole jest wymagane</p>
                 </div>
 
-                {/*<p  style={}>Numer pelel powinien zawierać 11 cyfr*/}
-
-                {/*</p>*/}
 
             </div>
 
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label">Narodowość</label>
+                <div className="razem">
+                <label className="col-sm-2 col-form-label">Narodowość :</label>
                 <div className="col-sm-10">
+                </div>
                     <input type="text"
                            className="form-control"
                            name='nationality'
                            placeholder="Podaj swoją narodowość"
                            value={personInfo.nationality}
                            onChange={handleChange}
+
                     />
+                    <p className="pole" style={check(personInfo.nationality)}>pole jest wymagane</p>
+
+
+
+
                 </div>
             </div>
 
-            <div>
+            <div className="razem">
 
-                <p>Podaj swoją płeć</p>
+                <p className= "col-sm-2">Podaj swoją płeć :</p>
 
             <div className="form-check" onClick={handleChange}>
                 <input className="form-check-input"
@@ -226,11 +251,12 @@ createPerson();
                     <label className="form-check-label" htmlFor="flexRadioDefault2">
                         Mężczyzna
                     </label>
+                <p className="pole"  style={check(personInfo.sex)}>pole jest wymagane</p>
             </div>
             </div>
-<div>
+<div className="razem">
 
-    <p>Podaj pztyczynę wyrobienia paszportu</p>
+    <p className="col-sm-2">Podaj pztyczynę wyrobienia paszportu :</p>
             <select name="reason" onChange={handleChange} placeholder='wybierz'>
                 <option value="paszport poprostu zgubilem">paszport poprostu zgubilem</option>
                 <option value="paszport skonczył date ważności">paszport skonczył date ważności</option>
@@ -243,26 +269,17 @@ createPerson();
            onChange={handleChange}
            style={personInfo.reason !== 'Przyczyna3' ? {display: "none"} : {display: "block"}}
     />
+    <p className="pole" style={check(personInfo.reason)}>pole jest wymagane</p>
 </div>
 <div>
 
 
-{/*    <input type="text"*/}
-{/*           className="form-control"*/}
-{/*           name='nationality'*/}
-{/*           placeholder="Podaj swoją narodowość"*/}
-{/*           value={personInfo.nationality}*/}
-{/*           onChange={handleChange}*/}
-{/*    />*/}
-{/*</div>*/}
-{/*</div>*/}
-{/*    */}
 
-
-    <p className="dane">Dane Kontaktowe</p>
+    <p className="opis"> - DANE KONTAKTOWE -</p>
 
 
     <div className="form-group row">
+        <div className="dane">
         <label className="col-sm-2 col-form-label">Adres e-mail</label>
         <div className="col-sm-10">
             <input type=""
@@ -272,12 +289,18 @@ createPerson();
                    value={personInfo.mail}
                    onChange={handleChange}
             />
+               </div>
+            <p className="pole" style={check(personInfo.mail)}>pole jest wymagane</p>
+
         </div>
     </div>
 
     <div className="form-group row">
+        <div className="dane">
         <label className="col-sm-2 col-form-label">Numer telefonu</label>
         <div className="col-sm-10">
+
+
             <input type="number"
                    className="form-control"
                    name='number'
@@ -286,10 +309,13 @@ createPerson();
                    onChange={handleChange}
             />
         </div>
-    </div>
+            <p className="pole" style={check(personInfo.number)}>pole jest wymagane</p>
+        </div>
+</div>
 
 
     <div className="form-group row">
+        <div className="dane">
         <label className="col-sm-2 col-form-label">Adres zamieszkania</label>
         <div className="col-sm-10">
             <input type="text"
@@ -324,23 +350,28 @@ createPerson();
                    onChange={handleChange}
 
             />
+
+        </div>
+            <p className="pole" style={check(personInfo.zipCode)}>pole jest wymagane</p>
         </div>
     </div>
 
 
-    <p>Zapoznałęm się z regulaminem</p>
+<div className="regulamin">
     <Regulamin></Regulamin>
-            <label>
-                <input name= "regulamin" type="checkbox"
+            <label className="input-regulamin">
+                <p>Zapoznałęm się z regulaminem</p>
+                <input className="regulamin" type="checkbox"
                        value={personInfo.regulamin}
                        onClick={acceptRegulamin}
 
                 />
             </label>
-
+</div>
 </div>
 
-            <button className="button1" type="submit" disabled={!regulamin.regulamin} >Wyślij wniosek</button>
+            <button  className="button1" type="submit" disabled={!regulamin.regulamin} >Wyślij wniosek</button>
+            <button className="button1"><a href='/request-list'>Lista Wniosków</a></button>
 
 
         </form>

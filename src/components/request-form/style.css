@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300&display=swap');
+
 .container{
 
 
@@ -14,15 +16,11 @@ div.form-group {
   margin-bottom: 10px
 }
 
-.wypij{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
 
-.dane{
-  font-size: 25px;
-  margin-top: 20px;
+.opis{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 40px;
   margin-bottom: 20px;
   text-align: center;
  }
@@ -44,4 +42,57 @@ button{
   margin: 30px;
 }
 
-button:hover{box-shadow: 0 30px 50px 0 #FFD54F}
+button1:hover{box-shadow: 0px 0px 5px 0 #FFD54F}
+
+.form-control{
+  position: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group{
+  margin: auto;
+}
+
+.col-sm-2 {
+  width: 100%;
+  font-family: 'Stoke', serif;
+  font-weight: bolder;
+  color: white;
+}
+.col-sm-10{
+  display: flex;
+}
+.pole{
+  font-size: 12px;
+}
+
+.razem{
+  border-bottom: 3px solid #8c8239;
+  padding-bottom: 5px;
+  padding-top: 30px;
+}
+input{
+  margin-left: 10px;
+}
+.input-regulamin{
+  display: flex;
+  margin-left: 30px;
+
+}
+.btn-primary{
+  height: 40px;
+}
+.regulamin{
+  display: block;
+  align-items: baseline;
+}
+button:not(:disabled) {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+.request-list{
+  height: 80vh;
+}

@@ -1,13 +1,13 @@
 import React from "react";
-
+import "./style.css";
 
 
 const RequestList = (props) => {
 
     return(
 
-        <div>
-<div className="container">
+        <div className="request-list">
+            <div className="container">
             <p>
                 Lista złożonych wniosków
             </p>
@@ -16,9 +16,9 @@ const RequestList = (props) => {
             <table className="table table-striped table-dark">
                 <thead>
                 <tr>
-                    <th scope="col">numer</th>
                     <th scope="col">Imię</th>
                     <th scope="col">Nazwisko</th>
+                    <th scope="col">Pesel</th>
                     <th scope="col">mail</th>
                 </tr>
                 </thead>
@@ -32,10 +32,10 @@ const RequestList = (props) => {
                                 {person.name}
                             </td>
                             <td>
-                                {person.secondName}
+                                {person.surname}
                             </td>
                             <td>
-                                {person.surname}
+                                {person.personalId}
                             </td>
                             <td>
                                 {person.mail}

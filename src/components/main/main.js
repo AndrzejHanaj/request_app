@@ -20,7 +20,7 @@ const Main = () => {
                 <button className="button1"><a href='/request-list'>Lista Wniosków</a></button>
             </div>
 
-                <Regulamin></Regulamin>
+                {/*<Regulamin></Regulamin>*/}
 
             </div>
 
