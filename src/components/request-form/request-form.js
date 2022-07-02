@@ -67,10 +67,10 @@ createPerson();
 
 
     function validation(name){
-        if (name !== ""){
+        if (name === ""){
             return ''
         }
-        else console.log("źle");
+        else console.log("good");
 
     }
 
@@ -100,7 +100,7 @@ createPerson();
                 <label className="col-sm-2 col-form-label">Imię :</label>
                 <div className="col-sm-10">
                 </div>
-                    <input type="text"
+                    <input type="text" required
                            className="form-control"
                            name='name'
                            placeholder="Wpisz imię"
@@ -108,7 +108,7 @@ createPerson();
                            onChange={handleChange}
                            // onBlur={validation(personInfo.name)}
                     />
-                    <p className="pole" style={check(personInfo.name)}>pole jest wymagane
+                    <p className="pole" style={check(personInfo.name)}> * pole jest wymagane
                         {/*{personInfo.name === ''?  <p>jest zle</p>:''}*/}
                     </p>
                     {/*{validation(personInfo.name)}*/}
@@ -137,14 +137,14 @@ createPerson();
                 <label className="col-sm-2 col-form-label">Nazwisko :</label>
                 <div className="col-sm-10">
                 </div>
-                    <input type="text"
+                    <input type="text" required
                            className="form-control"
                            name='surname'
                            placeholder="Wpisz Nazwisko"
                            value={personInfo.surname}
                            onChange={handleChange}
-                    />
-                    <p className="pole" style={check(personInfo.surname)}>pole jest wymagane</p>
+                     />
+                    <p className="pole" style={check(personInfo.surname)}> * pole jest wymagane</p>
                 </div>
             </div>
             <div className="form-group row">
@@ -152,7 +152,7 @@ createPerson();
                 <label className="col-sm-2 col-form-label">Data urodzenia :</label>
                 <div className="col-sm-10">
                 </div>
-                    <input type="date"
+                    <input type="date" required
                            className="form-control"
                            name='dateOfBirth'
                            placeholder="Wpisz Nazwisko"
@@ -168,7 +168,7 @@ createPerson();
                 <label className="col-sm-2 col-form-label">Miejsce urodzenia :</label>
                 <div className="col-sm-10">
                 </div>
-                    <input type="text"
+                    <input type="text" required
                            className="form-control"
                            name='placeOfBirth'
                            placeholder="Wpisz miejsce urodzenia"
@@ -183,7 +183,7 @@ createPerson();
                 <label className="col-sm-2 col-form-label">Pesel :</label>
                 <div className="col-sm-10">
                 </div>
-                    <input type="number"
+                    <input type="number" required
                            className="form-control"
                            name='personalId'
                            placeholder="Wpisz swój numer pesel"
@@ -207,7 +207,7 @@ createPerson();
                 <label className="col-sm-2 col-form-label">Narodowość :</label>
                 <div className="col-sm-10">
                 </div>
-                    <input type="text"
+                    <input type="text" required
                            className="form-control"
                            name='nationality'
                            placeholder="Podaj swoją narodowość"
@@ -229,7 +229,7 @@ createPerson();
 
             <div className="form-check" onClick={handleChange}>
                 <input className="form-check-input"
-                       type="radio"
+                       type="radio" required
                        name="sex"
                        id="flexRadioDefault1"
                        value="female"
@@ -242,7 +242,7 @@ createPerson();
             </div>
             <div className="form-check" onClick={handleChange}>
                 <input className="form-check-input"
-                       type="radio"
+                       type="radio" required
                        name="sex"
                        id="flexRadioDefault2"
                        value="male"
@@ -256,13 +256,13 @@ createPerson();
             </div>
 <div className="razem">
 
-    <p className="col-sm-2">Podaj pztyczynę wyrobienia paszportu :</p>
+    <p className="col-sm-2">Podaj przyczynę wyrobienia paszportu :</p>
             <select name="reason" onChange={handleChange} placeholder='wybierz'>
                 <option value="paszport poprostu zgubilem">paszport poprostu zgubilem</option>
                 <option value="paszport skonczył date ważności">paszport skonczył date ważności</option>
                 <option value="Przyczyna3">inna</option>
             </select>
-    <input type="text"
+    <input type="text" required
            className="form-control"
            name='differentReason'
            placeholder="Podaj inną przyczyne wyrobienia paszportu"
@@ -282,7 +282,7 @@ createPerson();
         <div className="dane">
         <label className="col-sm-2 col-form-label">Adres e-mail</label>
         <div className="col-sm-10">
-            <input type=""
+            <input type="" required
                    className="form-control"
                    name='mail'
                    placeholder="Adres e-mail"
@@ -301,7 +301,7 @@ createPerson();
         <div className="col-sm-10">
 
 
-            <input type="number"
+            <input type="number" required
                    className="form-control"
                    name='number'
                    placeholder="Telefon"
@@ -318,7 +318,7 @@ createPerson();
         <div className="dane">
         <label className="col-sm-2 col-form-label">Adres zamieszkania</label>
         <div className="col-sm-10">
-            <input type="text"
+            <input type="text" required
                    className="form-control"
                    name='city'
                    placeholder="Miasto"
@@ -326,7 +326,7 @@ createPerson();
                    onChange={handleChange}
 
             />
-            <input type="text"
+            <input type="text" required
                    className="form-control"
                    name='street'
                    placeholder="ulica"
@@ -334,7 +334,7 @@ createPerson();
                    onChange={handleChange}
 
             />
-            <input type="text"
+            <input type="text" required
                    className="form-control"
                    name='homeNumber'
                    placeholder="Numer lokalu"
@@ -342,7 +342,7 @@ createPerson();
                    onChange={handleChange}
 
             />
-            <input type="text"
+            <input type="text" required
                    className="form-control"
                    name='zipCode'
                    placeholder="Kod pocztowy"

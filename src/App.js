@@ -7,7 +7,6 @@ import RequestForm from "./components/request-form/request-form";
 import {  BrowserRouter as Router,  Routes,  Route} from "react-router-dom";
 import RequestList from "./components/request-list/request-list";
 import Regulamin from "./components/regulamin/regulamin";
-import footer from "./components/footer/footer";
 import Footer from "./components/footer/footer";
 import {collection, doc, getDocs, addDoc} from "firebase/firestore";
 import {db} from "./firebase/firebase";

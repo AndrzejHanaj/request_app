@@ -8,8 +8,8 @@ const RequestList = (props) => {
 
         <div className="request-list">
             <div className="container">
-            <p>
-                Lista złożonych wniosków
+            <p className="opis">
+               - LISTA ZŁOŻONYCH WNIOSKÓW -
             </p>
 
 
